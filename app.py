@@ -117,7 +117,10 @@ def main():
       prediction = np.round(model.predict(attributes)).astype(int)
 
       result = prediction
-      st.write(result)
+      if result == 0:
+        st.write("Your odds of having a cardiovascular disease at the moment are very low. Keep up your current lifestyle!")
+      else:
+        st.write("Your odds of having a cardiovascular disease right now are high, please visit your doctor for more informations!")
 
 
 if __name__ == '__main__':
