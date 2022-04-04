@@ -99,7 +99,7 @@ def main():
 #     attributes -= mean
 #     std = attributes.std(axis=0)
 #     attributes /= std
-    st.write(attributes)
+#     st.write(attributes)
     
     result = ""
 #     #
@@ -114,7 +114,7 @@ def main():
 #       scaler = StandardScaler()
 #       scaler.fit(dataframe)
 #       featureshost = scaler.transform(dataframe)
-      prediction = model.predict(attributes)
+      prediction = np.round(model.predict(attributes)).astype(int)
 
       result = prediction
       st.write(result)
