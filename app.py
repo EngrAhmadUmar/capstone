@@ -100,9 +100,9 @@ def main():
     attributes /= std
     st.write(attributes)
     
-#     result = ""
+    result = ""
 #     #
-#     if st.button("Predict"):
+    if st.button("Predict"):
 #       arr = dataframe.columns
 
 #       for i in arr:
@@ -113,10 +113,10 @@ def main():
 #       scaler = StandardScaler()
 #       scaler.fit(dataframe)
 #       featureshost = scaler.transform(dataframe)
-#       prediction = model.predict(featureshost)
+      prediction = model.predict(attributes)
 
-#       result = prediction
-#       st.write(result)
+      result = prediction
+      st.write(result)
 
 
 if __name__ == '__main__':
