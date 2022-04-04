@@ -90,10 +90,11 @@ def main():
        thal = 1
     else:
        thal = 2
-    attributes = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
-       'exang', 'oldpeak', 'slope', 'ca', 'thal']
+    attributes = [age, sex, cp, trestbps, chol, fbs, restecg, thalach,
+       exang, oldpeak, slope, ca, thal]
      
     attributes = np.array(attributes)
+    attributes = np.array([attributes])
 #     mean = attributes.mean(axis=0)
 #     attributes -= mean
 #     std = attributes.std(axis=0)
