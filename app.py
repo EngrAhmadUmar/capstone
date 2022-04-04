@@ -94,10 +94,10 @@ def main():
        'exang', 'oldpeak', 'slope', 'ca', 'thal']
      
     attributes = np.array(attributes)
-    mean = attributes.mean(axis=0)
-    attributes -= mean
-    std = attributes.std(axis=0)
-    attributes /= std
+#     mean = attributes.mean(axis=0)
+#     attributes -= mean
+#     std = attributes.std(axis=0)
+#     attributes /= std
     st.write(attributes)
     
     result = ""
