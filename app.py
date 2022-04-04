@@ -72,26 +72,26 @@ def main():
         exang = 1
     else:
         exang = 0
-     oldpeak = st.number_input('Please enter ST depression induced by exercise relative to rest: ')
-     slope = st.selectbox(
+    oldpeak = st.number_input('Please enter ST depression induced by exercise relative to rest: ')
+    slope = st.selectbox(
      'Please select the slope of the peak exercise ST segment: ',
      ('Upsloping', 'Flat', 'Downsloping'))
-     if slope == "Upsloping":
-        slope = 0
-     elif slope == "Flat":
-        slope = 1
-     else:
-        slope = 2
-     ca = st.number_input('Please enter your number of major vessels (0-3) colored by flourosopy: ')
-     thal = st.selectbox(
+    if slope == "Upsloping":
+       slope = 0
+    elif slope == "Flat":
+       slope = 1
+    else:
+       slope = 2
+    ca = st.number_input('Please enter your number of major vessels (0-3) colored by flourosopy: ')
+    thal = st.selectbox(
      'Please select the slope of the peak exercise ST segment: ',
      ('Normal', 'Fixed defect', 'Reversable defect'))
-     if thal == "Normal":
-        thal = 0
-     elif thal == "Fixed defect":
-        thal = 1
-     else:
-        thal = 2
+    if thal == "Normal":
+       thal = 0
+    elif thal == "Fixed defect":
+       thal = 1
+    else:
+       thal = 2
     attributes = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
        'exang', 'oldpeak', 'slope', 'ca', 'thal']
      
