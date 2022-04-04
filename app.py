@@ -27,7 +27,7 @@ def main():
     age = st.number_input('Please enter your age here: ')
     sex = st.selectbox(
      'Please select your sex here: ',
-     ('Male', 'Female')
+     ('Male', 'Female'))
     if sex == 'male':
         sex = 1
     else:
@@ -94,7 +94,12 @@ def main():
         thal = 2
     attributes = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
        'exang', 'oldpeak', 'slope', 'ca', 'thal']
-        
+     
+    attributes = np.array(attributes)
+    mean = attributes.mean(axis=0)
+    attributes -= mean
+    std = attributes.std(axis=0)
+    attributes /= std
     st.write(attributes)
     
 #     result = ""
